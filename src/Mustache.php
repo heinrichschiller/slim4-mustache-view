@@ -46,14 +46,14 @@ class Mustache
     /**
      * @var Mustache_Engine
      */
-    private Mustache_Engine $mustache;
+    private $mustache;
 
     /**
      * The constructor
      * 
      * @param array $options Mustache constructor options
      * 
-     * For more informations about Mustache constructor options,
+     * For more details about Mustache constructor options,
      * see: 
      * 
      * https://github.com/bobthecow/mustache.php/wiki#constructor-options
