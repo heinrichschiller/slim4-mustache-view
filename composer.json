@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Slim\\View\\": "src/View/"
+            "Slim\\Views\\": "src/"
         }
     },
     "autoload-dev": {

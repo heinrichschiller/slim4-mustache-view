@@ -27,20 +27,51 @@
 
 declare( strict_types = 1 );
 
-namespace Slim\View;
+namespace Slim\Views;
 
 use Mustache_Engine;
 use Psr\Http\Message\ResponseInterface as Response;
 
+/**
+ * Slim4 Mustache View
+ * 
+ * This class is a Slim Framework view helper built on top 
+ * of the Mustache templating component.
+ * Mustache is a PHP component created by Justin Hileman.
+ * 
+ * @link https://github.com/bobthecow/mustache.php
+ */
 class Mustache
 {
+    /**
+     * @var Mustache_Engine
+     */
     private Mustache_Engine $mustache;
 
+    /**
+     * The constructor
+     * 
+     * @param array $options Mustache constructor options
+     * 
+     * For more informations about Mustache constructor options,
+     * see: 
+     * 
+     * https://github.com/bobthecow/mustache.php/wiki#constructor-options
+     */
     public function __construct(array $options)
     {
         $this->mustache = new Mustache_Engine($options);
     }
 
+    /**
+     * Output rendered template
+     * 
+     * @param Response $response
+     * @param string $template Name of the template
+     * @param mixed $data Template variables
+     * 
+     * @return Response
+     */
     public function render(Response $response, string $template, $data): Response
     {
         $html = $this->mustache->render($template, $data);

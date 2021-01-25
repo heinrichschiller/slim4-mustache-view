@@ -1,6 +1,6 @@
 <?php
 
-use Slim\View\Mustache;
+use Slim\Views\Mustache;
 use PHPUnit\Framework\TestCase;
 
 class MustacheFactoryTest extends TestCase
