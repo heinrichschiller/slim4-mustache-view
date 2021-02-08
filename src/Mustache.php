@@ -72,7 +72,7 @@ class Mustache
      * 
      * @return Response
      */
-    public function render(Response $response, string $template, $data): Response
+    public function render(Response $response, string $template, $data = []): Response
     {
         $html = $this->mustache->render($template, $data);
         $response->getBody()->write($html);
