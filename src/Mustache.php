@@ -41,7 +41,7 @@ use Psr\Http\Message\ResponseInterface as Response;
  * 
  * @link https://github.com/bobthecow/mustache.php
  */
-class Mustache
+class Mustache implements ViewInterface
 {
     /**
      * @var Mustache_Engine

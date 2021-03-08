@@ -41,7 +41,7 @@ Next, define Mustache-Container like this:
 ```php
 ...
 
-Mustache::class => function(ContainerInterface $container): Mustache
+ViewInterface::class => function(ContainerInterface $container): ViewInterface
 {
     $options = $container->get('settings')['mustache'];
 
@@ -59,7 +59,7 @@ And create a container injection, like this:
 IndexAction::class => function(ContainerInterface $container): IndexAction
 {
     return new IndexAction(
-        $container->get(Mustache::class),
+        $container->get(ViewInterface::class),
     );
 }
 
@@ -82,9 +82,9 @@ use Slim\View\Mustache;
 
 class IndexAction
 {
-    private $view;
+    private ViewInterface $view;
 
-    public function __construct(Mustache $view)
+    public function __construct(ViewInterface $view)
     {
         $this->view = $view;
     }
