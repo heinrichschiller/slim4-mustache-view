@@ -12,13 +12,13 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.3",
-        "mustache/mustache": "2.13.0",
-        "monolog/monolog": "2.2.0"
+        "php": "^7.3 || ^8.0",
+        "mustache/mustache": "^2.13",
+        "monolog/monolog": "^2.2"
     },
     "require-dev": {
-        "slim/slim": "4.*",
-        "phpunit/phpunit": "^9.5.0"
+        "slim/slim": "^4.7",
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
