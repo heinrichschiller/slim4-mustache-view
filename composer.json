@@ -17,7 +17,7 @@
         "monolog/monolog": "^2.3"
     },
     "require-dev": {
-        "slim/slim": "^4.7",
+        "slim/slim": "^4.8",
         "phpunit/phpunit": "^9.5"
     },
     "autoload": {
